@@ -1,0 +1,37 @@
+<html>
+    <script type="text/javascript">
+        function fonk(){
+            var n, i, sum = 0, flag = true;
+
+            n = document.myform.n.value;
+            n = parseInt(n);
+
+            for(i = 1; i < n; i++){
+                if(n % i == 0){
+                    sum += i;
+                    if(sum == n){
+                        flag = true;
+                    }
+                    else{
+                        flag = false;
+                    }
+                }
+            }
+            if(flag == true){
+                alert(n + " bir mükemmel sayıdır.");
+            }
+            else{
+                alert(n + " bir mükemmel sayı değildir.")
+            }
+        }
+    </script>
+    <body>
+        <center>
+            <form name="myform">
+                <input placeholder="Sayı Giriniz" type="text" name="n" value="">
+                <input type="button" value="Kontrol Et" onclick="fonk()">
+                <br>
+            </form>
+        </center>
+    </body>
+</html>
